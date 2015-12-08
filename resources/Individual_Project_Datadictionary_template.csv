@@ -1,0 +1,13 @@
+"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
+record_id,participant_roster,,text,"Record ID",,,,,,,,,,,,,
+first_name,participant_roster,,text,"First Name",,,,,,y,,y,,,,,
+last_name,participant_roster,,text,"Last Name",,,,,,y,,y,,,,,
+email,participant_roster,,text,Email,,,email,,,y,,y,,,,,
+secretphrase,participant_roster,,notes,"Secret phrase",,,,,,y,,y,,,,,
+show_info,participant_survey,,descriptive,"Name: [first_name] [last_name]
+Secret Phrase:
+
+[secretphrase]",,,,,,,,,,,,,
+sample_1,participant_survey,,text,"Sample question 1",,,,,,,,y,,,,,
+sample_2,participant_survey,,text,"Sample question 2",,,,,,,,,,,,,
+sample_3,participant_survey,,text,"Sample question 3",,,,,,,,,,,,,
