@@ -1,0 +1,29 @@
+"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
+record_id,challenge_participation_form,,text,"Record ID",,,,,,,,,,,,,
+first_name,challenge_participation_form,,text,"First Name",,,,,,y,,y,,,,,
+last_name,challenge_participation_form,,text,"Last Name",,,,,,y,,y,,,,,
+email,challenge_participation_form,,text,Email,,,email,,,y,,y,,,,,
+netid,challenge_participation_form,,text,"Net ID",,"Required so I can create a project and add you to it",,,,y,,y,,,,,
+whitelist_y,bookkeeping,,yesno,"Added NetID to REDCap2 whitelist?",,,,,,,,,,,,,
+project_y,bookkeeping,,yesno,"Created project?",,,,,,,,,,,,,
+project_id,bookkeeping,,text,"Project ID",,,integer,,,,"[project_y] = '1'",,,,,,
+project_title,bookkeeping,,text,"Project Title",,,,,,,"[project_y] = '1'",,,,,,
+api_master_request_y,bookkeeping,,yesno,"Requested API for master?",,,,,,,"[project_y] = '1'",,,,,,
+api_master_given_y,bookkeeping,,yesno,"API Given for master project?",,,,,,,"[project_y] = '1'",,,,,,
+api_indiv_request_y,bookkeeping,,yesno,"Requested API for individual project?",,,,,,,"[project_y] = '1'",,,,,,
+api_indiv_given_y,bookkeeping,,yesno,"API given for individual project?",,,,,,,"[project_y] = '1'",,,,,,
+show_info,challenge_confirmation_form,,descriptive,"Name: [first_name] [last_name]
+NetID: [netid]",,,,,,,,,,,,,
+show_project,challenge_confirmation_form,,descriptive,"This is to confirm that your request to join this challenge has been received. 
+
+A project titled ""[project_title]"" has been created for you. 
+
+Once you log in to REDCap, you will see your project and you can change its title and information.
+
+Note: If you want to use the API rather than import/export module to manage your project you will need to request the API token within REDCap application",,,,,,,,,,,,,
+agree_y,challenge_confirmation_form,,radio,"As part of the challenge, you will be asked to respond to surveys developed and sent by other participants. 
+
+Do you agree to receiving such surveys from other participants in the challenge to the email you provided earlier? ([email])","1, Yes, I agree","Approval is required to proceed",,,,,,y,,,,,
+secretphrase,challenge_confirmation_form,,notes,"Please enter in this space a phrase that would be shared with the other participants and that would be known only to you and to them.
+
+What is this for? As part of this challenge, you will be receiving surveys from other participants. To assure you that the surveys you will be receiving are from other vetted fellow participants, we will show this phrase in those surveys. Don't type any private information like passwords.",,"""He-llo from the other siiiiiide"" ... is over played and probably isn't a good private phrase",,,,,,y,,,,,
