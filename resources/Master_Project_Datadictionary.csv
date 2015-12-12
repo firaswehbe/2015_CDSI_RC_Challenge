@@ -7,7 +7,6 @@ netid,challenge_participation_form,,text,"Net ID",,"Required so I can create a p
 whitelist_y,bookkeeping,,yesno,"Added NetID to REDCap2 whitelist?",,,,,,,,,,,,,
 project_y,bookkeeping,,yesno,"Created project?",,,,,,,,,,,,,
 project_id,bookkeeping,,text,"Project ID",,,integer,,,,"[project_y] = '1'",,,,,,
-project_title,bookkeeping,,text,"Project Title",,,,,,,"[project_y] = '1'",,,,,,
 api_master_request_y,bookkeeping,,yesno,"Requested API for master?",,,,,,,"[project_y] = '1'",,,,,,
 api_master_given_y,bookkeeping,,yesno,"API Given for master project?",,,,,,,"[project_y] = '1'",,,,,,
 api_indiv_request_y,bookkeeping,,yesno,"Requested API for individual project?",,,,,,,"[project_y] = '1'",,,,,,
@@ -16,7 +15,7 @@ show_info,challenge_confirmation_form,,descriptive,"Name: [first_name] [last_nam
 NetID: [netid]",,,,,,,,,,,,,
 show_project,challenge_confirmation_form,,descriptive,"This is to confirm that your request to join this challenge has been received. 
 
-A project titled ""[project_title]"" has been created for you. 
+A project titled ""CDSI Challenge for [netid]"" has been created for you. 
 
 Once you log in to REDCap, you will see your project and you can change its title and information.
 
