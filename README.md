@@ -21,7 +21,7 @@ To participate and find out what the next step is, fill the following survey.
 [https://redcap2.nubic.northwestern.edu/redcap/surveys/?s=E9CJ3PWXWK](https://redcap2.nubic.northwestern.edu/redcap/surveys/?s=E9CJ3PWXWK)
 
 *First challenge: try to sign up twice? What field did I constrain to be the
-**secondary identified field?** *
+'secondary identifier field'?*
 
 Enjoy!
 
