@@ -12,7 +12,10 @@ will be referred to as `Your Personal Project`.
 
 Your task which is due on **Tuesday January 12, 2016 at midnight** is to build a
 survey in Your Personal Project and send that survey to everyone whose name is
-in the Master Project. 
+in the Master Project. To ensure that we have survey participation, you also
+have to respond to 50% or more of the surveys that you receive from other
+participants. 
+
 
 ## Building Your Personal Project
 
@@ -31,13 +34,14 @@ following 4 variables all of which also exist in the Master Project:
 * `secretphrase`
 
 You will also need to build a data capture form and enable it as a survey that goes
-out to everyone based on their `email` field.
+out to everyone based on their `email` field. (I will describe below how to
+enable a form as a survey and how to designate an email field.)
 
 A good way to achieve personalization in the survey form is to use
 a question of type 'descriptive' which is basically just text with no input
 field. You can use REDCap's piping syntax to display to them the contents of the
 other fields. For example the text that you would show in that 'descriptive' text
-can have the following value where the square brackets are REDCap's way to pipe
+can have the following value. The square brackets are REDCap's syntax to pipe
 values from the other fields:
 
 ```
@@ -62,6 +66,24 @@ button.
 It will take you to a page where you can upload the template CSV file that I
 made you. Be sure to commit your changes.
 
-This will create 
+If all goes well, Your Personal Project should now contain 2 forms.
+
+`Participant Roster` form with the following fields:
+
+* `record_id`
+* `first_name`
+* `last_name`
+* `email`
+* `secretphrase`
+
+`Participant Survey` form with the following fields:
+
+* `show_info`: a descriptive field as described above
+* `sample_1`: a simple text field
+* `sample_2`: a simple text field
+* `sample_3`: a simple text field
+
+
+
 
 ## Entering the Roster and Keeping it Current
