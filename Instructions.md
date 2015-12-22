@@ -63,7 +63,7 @@ If all goes well, Your Personal Project should now contain 2 forms.
 
 `Participant Survey` form with the following fields:
 
-* `show_info`: a descriptive field as described above
+* `show_info`: a descriptive field as described below
 * `sample_1`: a simple text field that you will need to modify
 * `sample_2`: a simple text field that you will need to modify
 * `sample_3`: a simple text field that you will need to modify
@@ -89,7 +89,12 @@ like this:
 
 ![Enable Survey](resources/usersurvey.png)
 
-And to designate the `email` field in the `Participant Roster` form as the
+Then enable the `Participant Survey` form as a survey in the **Online
+Designer**. 
+
+![Enable Participant Survey as a Survey](resources/enableparticipantsurvey.png)
+
+Finally, designate the `email` field in the `Participant Roster` form as the
 survey invitation field. This way you can use REDCap's built in survey managment
 interface to create and send personalized invitations containing a survey link
 unique to each person. Once you designate your survey invitation field, Your
