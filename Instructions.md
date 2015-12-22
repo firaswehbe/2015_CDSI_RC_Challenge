@@ -2,10 +2,10 @@
 
 You have access to two projects in REDCap now:
 
-1. `REDCap API CDSI Dev Talk`: This is the project for which you just filled your
-participation survey. Your response (including your secretphrase) and the
-responses from everyone else are are stored in this project. This will be
-referred to as the `Master Project`.
+1. `REDCap API CDSI Dev Talk`: (Read-only) This is the project for which you
+just filled your participation survey. Your response (including your
+secretphrase) and the responses from everyone else are are stored in this
+project. This will be referred to as the `Master Project`.
 2. `CDSI Challenge for $YOURNETID`: A blank project that you will use to survey
 all the other challenge participants. Feel free to rename this project. This
 will be referred to as `Your Personal Project`.
@@ -19,19 +19,16 @@ participants.
 
 ## Building Your Personal Project
 
+### Defining the Forms and Data Elements
+
 Like you, everyone whose name ends up in the Master Project has provided a
 secretphrase while filling the participation survey. You will need to use REDCap
 to send each person a personalized survey link which displays to them the
 secretphrase that they have provided... to assure them that the survey is sent
 by a fellow participant. 
 
-To support that, your Your Personal Project will need to include at least the
-following 4 variables all of which also exist in the Master Project:
-
-* `first_name`
-* `last_name`
-* `email`
-* `secretphrase`
+To support that, your Your Personal Project will need to build your project in a
+way that captures their names, email, and secret phrase of your colleagues. 
 
 You will also need to build a data capture form and enable it as a survey that goes
 out to everyone based on their `email` field. (I will describe below how to
@@ -53,9 +50,9 @@ The **GOOD NEWS** is that I already made a template that you can use to
 create all this. This is CSV file that has the metadata that you can uplaod to
 REDCap to define forms and fields.
 
-Download the file `resources/Individual_Project_Datadictionary_template.csv` in
-this repository (link
-[here](resources/Individual_Project_Datadictionary_template.csv)).
+Download the file `resources/Individual_Project_Datadictionary_template.csv`
+from this repository (link
+[here](resources/Individual_Project_Datadictionary_template.csv)).  
 
 Go to Your Personal Project and click on **Project Setup**. In the portion that
 says "Design your data collection instruments" click on the **Data Dictionary**
@@ -79,11 +76,23 @@ If all goes well, Your Personal Project should now contain 2 forms.
 `Participant Survey` form with the following fields:
 
 * `show_info`: a descriptive field as described above
-* `sample_1`: a simple text field
-* `sample_2`: a simple text field
-* `sample_3`: a simple text field
+* `sample_1`: a simple text field that you will need to modify
+* `sample_2`: a simple text field that you will need to modify
+* `sample_3`: a simple text field that you will need to modify
 
+### Enabling the Survey
 
+Make sure you enable surveys for Your Personal Project.
+
+![Enable Survey](resources/usersurvey.png)
+
+Designate `email`
+
+![Designate email as the survey invitation field](resources/designateemail.png)
 
 
 ## Entering the Roster and Keeping it Current
+
+Disable auto-numbering so you can use `record_id` from the Master Project.
+
+![Disable auto-numbering of records](resources/disableautonum.png)
