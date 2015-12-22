@@ -24,27 +24,15 @@ participants.
 Like you, everyone whose name ends up in the Master Project has provided a
 secretphrase while filling the participation survey. You will need to use REDCap
 to send each person a personalized survey link which displays to them the
-secretphrase that they have provided... to assure them that the survey is sent
+secretphrase that they have provided. This is to assure them that the survey is sent
 by a fellow participant. 
 
-To support that, your Your Personal Project will need to build your project in a
+To support that, you will need to build Your Personal Project in a way 
 way that captures their names, email, and secret phrase of your colleagues. 
 
 You will also need to build a data capture form and enable it as a survey that goes
-out to everyone based on their `email` field. (I will describe below how to
+out to everyone based on a designated email field. (I will describe below how to
 enable a form as a survey and how to designate an email field.)
-
-A good way to achieve personalization in the survey form is to use
-a question of type 'descriptive' which is basically just text with no input
-field. You can use REDCap's piping syntax to display to them the contents of the
-other fields. For example the text that you would show in that 'descriptive' text
-can have the following value. The square brackets are REDCap's syntax to pipe
-values from the other fields:
-
-```
-Hello [first_name] [last_name], your secret phrase is: 
-[secretphrase]
-```
 
 The **GOOD NEWS** is that I already made a template that you can use to
 create all this. This is CSV file that has the metadata that you can uplaod to
@@ -80,16 +68,39 @@ If all goes well, Your Personal Project should now contain 2 forms.
 * `sample_2`: a simple text field that you will need to modify
 * `sample_3`: a simple text field that you will need to modify
 
+### Personalizing Your Survey Using the Secretphrase
+
+A good way to achieve personalization in the survey form is to use a question of
+type 'descriptive' which is basically just text with no input field. (e.g. the
+`show_info` above) You can use REDCap's piping syntax to display to them the
+contents of the other fields. For example the text that you would show in that
+'descriptive' text can have the following value. The square brackets are
+REDCap's syntax to pipe values from the other fields:
+
+```
+Hello [first_name] [last_name], your secret phrase is: 
+[secretphrase]
+```
+
 ### Enabling the Survey
 
-Make sure you enable surveys for Your Personal Project.
+Make sure you enable surveys for Your Personal Project. Your project should look
+like this:
 
 ![Enable Survey](resources/usersurvey.png)
 
-Designate `email`
+And to designate the `email` field in the `Participant Roster` form as the
+survey invitation field. This way you can use REDCap's built in survey managment
+interface to create and send personalized invitations containing a survey link
+unique to each person. Once you designate your survey invitation field, Your
+Personal Project set up page should look like this:
 
 ![Designate email as the survey invitation field](resources/designateemail.png)
 
+### Build Your Own Survey Questions
+
+You have what you need in terms of infrastructure. Now it's up to you to build
+the survey
 
 ## Entering the Roster and Keeping it Current
 
