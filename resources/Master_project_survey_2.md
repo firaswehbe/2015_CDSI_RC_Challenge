@@ -7,8 +7,9 @@ Challenge Confirmation Form
 **Instructions**
 
 ```html
-<p><strong>Hello [first_name].</strong></p>
-<p><strong>I have created a REDCap project title [project_title] on the <a href="/" target="_blank">test server</a>. After you confirm the information below and submit the required fields, you will be redirected to the REDCap server to see your project.<br /></strong></p>
+<p>Hello [first_name].</p>
+<p>I have created a REDCap project title [project_title] on the <a href="/" target="_blank">test server</a>.</p>
+<p><strong>After you confirm the information below and submit the required fields, you will be redirected to a page with your next instructions.<br /></strong></p>
 <p>Thank you!</p>
 ```
 
@@ -16,4 +17,4 @@ Challenge Confirmation Form
 
 *No termination text, just a redirect to:*
 
-[https://redcap2.nubic.northwestern.edu/](https://redcap2.nubic.northwestern.edu/)
+[https://github.com/firaswehbe/2015_CDSI_RC_Challenge/blob/master/Instructions.md](https://github.com/firaswehbe/2015_CDSI_RC_Challenge/blob/master/Instructions.md)
