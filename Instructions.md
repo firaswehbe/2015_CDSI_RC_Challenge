@@ -105,7 +105,40 @@ Personal Project set up page should look like this:
 ### Build Your Own Survey Questions
 
 You have what you need in terms of infrastructure. Now it's up to you to build
-the survey
+the survey. Use the **Online Designer** to do that. Here are some guidelines:
+
+* Use at least 3 types of fields with or without validation so you learn the
+data model behind the various types of questions. 
+    * Text: numeric or integer +/- range validation e.g. age >18
+    * Text: date with the calendar "now" option
+    * Text: email, zip code, ...
+    * Note box
+    * Calculated field: check out all the functions you can utilize in those
+    * Single-answer multiple choice: dropdown or radio button or yes-no
+    * Multiple-choice: check box
+    * Slider: visual analog scale
+    * File upload
+    * Signature field
+    * Descriptive text where you show off that you know their names or other
+info about them in hidden fields of the same record
+* Keep it short -- no longer than 1-2 minutes to fill. This is a holiday project
+for us, not a chore.
+* Be creative and pick an interesting topic. Remember that participants are not
+obligated to fill every survey so try to be competitive in luring them into
+filling your survey. You can upload photos and a logo to your survey. 
+* Remember that this is not a de-identified survey, so people
+would not be comfortable answering private questions or questions about their
+health.
+
+Close the survey by midnight on January 12, 2016 and prepare a summary of what
+you learned about your colleagues from your questionnaire e.g. that 30% do not
+like chocolate holiday desert or that 1/2 of the foreign born participants have
+not had eggnog. 
+
+Note that you don't need to wait until the end to prepare your analysis. You can
+export the data into CSV files (or as JSON stream if you're using the API) while
+data are being entered. You can can prepare tentative reports if you automate
+how you analyze the data.
 
 ## Entering the Roster and Keeping it Current
 
