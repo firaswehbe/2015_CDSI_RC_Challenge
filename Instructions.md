@@ -1,12 +1,13 @@
 # Instructions
 
-You have access to two projects in REDCap now:
+By now, you should have access to two projects in the [test instance of
+REDCap](https://redcap2.nubic.northwestern.edu):
 
-1. `REDCap API CDSI Dev Talk`: (Read-only) This is the project for which you
+1. **`REDCap API CDSI Dev Talk`**: (Read-only) This is the project for which you
 just filled your participation survey. Your response (including your
 secretphrase) and the responses from everyone else are all  stored in this
 project. This will be referred to as the `Master Project`.
-2. `CDSI Challenge for $YOURNETID`: A blank project that you will use to survey
+2. **`CDSI Challenge for $YOURNETID`**: A blank project that you will use to survey
 all the other challenge participants. Feel free to rename this project. This
 will be referred to as `Your Personal Project`.
 
@@ -61,6 +62,7 @@ If all goes well, Your Personal Project should now contain 2 forms.
 * `first_name`
 * `last_name`
 * `email`
+* `agree_y`
 * `secretphrase`
 
 `Participant Survey` form with the following fields:

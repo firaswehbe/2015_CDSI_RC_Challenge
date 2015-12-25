@@ -3,7 +3,8 @@ record_id,participant_roster,,text,"Record ID",,,,,,,,,,,,,
 first_name,participant_roster,,text,"First Name",,,,,,y,,y,,,,,
 last_name,participant_roster,,text,"Last Name",,,,,,y,,y,,,,,
 email,participant_roster,,text,Email,,,email,,,y,,y,,,,,
-secretphrase,participant_roster,,notes,"Secret phrase",,,,,,y,,y,,,,,
+agree_y,participant_roster,,radio,"Agreed to be emailed?","1, yes","Note could be empty in the Master Project if they haven't received or filled the follow up survey",,,,,,,,,,,
+secretphrase,participant_roster,,notes,"Secret phrase",,"Note could be empty in the Master Project if they haven't received or filled the follow up survey",,,,y,,,,,,,
 show_info,participant_survey,,descriptive,"Name: [first_name] [last_name]
 Secret Phrase:
 
