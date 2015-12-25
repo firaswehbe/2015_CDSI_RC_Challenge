@@ -4,7 +4,7 @@ You have access to two projects in REDCap now:
 
 1. `REDCap API CDSI Dev Talk`: (Read-only) This is the project for which you
 just filled your participation survey. Your response (including your
-secretphrase) and the responses from everyone else are are stored in this
+secretphrase) and the responses from everyone else are all  stored in this
 project. This will be referred to as the `Master Project`.
 2. `CDSI Challenge for $YOURNETID`: A blank project that you will use to survey
 all the other challenge participants. Feel free to rename this project. This
@@ -28,19 +28,21 @@ secretphrase that they have provided. This is to assure them that the survey is 
 by a fellow participant. 
 
 To support that, you will need to build Your Personal Project in a way 
-way that captures their names, email, and secret phrase of your colleagues. 
+way that captures the names, email, and secretphrase of your colleagues. 
 
 You will also need to build a data capture form and enable it as a survey that goes
 out to everyone based on a designated email field. (I will describe below how to
 enable a form as a survey and how to designate an email field.)
 
 The **GOOD NEWS** is that I already made a template that you can use to
-create all this. This is CSV file that has the metadata that you can uplaod to
-REDCap to define forms and fields.
+create all this. It is a CSV file (Data Dictionary in REDCap's lingo) which
+defines all the metadata associated with forms and their fields in a project.
+REDcap allows you to download and upload Data Dictionary associated with
+projects for fast sharing and creation of forms.
 
-Download the file `resources/Individual_Project_Datadictionary_template.csv`
-from this repository (link
-[here](resources/Individual_Project_Datadictionary_template.csv)).  
+The Data Dictionary file that I created is in this github repository:  
+`resources/Individual_Project_Datadictionary_template.csv`
+(link [here](resources/Individual_Project_Datadictionary_template.csv)).  
 
 Go to Your Personal Project and click on **Project Setup**. In the portion that
 says "Design your data collection instruments" click on the **Data Dictionary**
@@ -74,25 +76,29 @@ A good way to achieve personalization in the survey form is to use a question of
 type 'descriptive' which is basically just text with no input field. (e.g. the
 `show_info` above) You can use REDCap's piping syntax to display to them the
 contents of the other fields. For example the text that you would show in that
-'descriptive' text can have the following value. The square brackets are
-REDCap's syntax to pipe values from the other fields:
+'descriptive' text can have the following value: 
 
 ```
 Hello [first_name] [last_name], your secret phrase is: 
 [secretphrase]
 ```
 
+*The square brackets are REDCap's syntax to pipe values from the other fields.*
+
 ### Enabling the Survey
 
-Make sure you enable surveys for Your Personal Project. Your project should look
-like this:
+You will need to enable surveys within Your Personal Project to be able to send
+online surveys. Once you do that, your project setting page should look like this:
 
 ![Enable Survey](resources/usersurvey.png)
 
-Then enable the `Participant Survey` form as a survey in the **Online
+Then enable the specific `Participant Survey` form as a survey in the **Online
 Designer**. 
 
 ![Enable Participant Survey as a Survey](resources/enableparticipantsurvey.png)
+
+*Note: keep the `Participant Roster` form as is. You're importing data into that
+form through the application and not via an online survey*
 
 Finally, designate the `email` field in the `Participant Roster` form as the
 survey invitation field. This way you can use REDCap's built in survey managment
@@ -107,16 +113,19 @@ Personal Project set up page should look like this:
 You have what you need in terms of infrastructure. Now it's up to you to build
 the survey. Use the **Online Designer** to do that. Here are some guidelines:
 
-* Use at least 3 types of fields with or without validation so you learn the
-data model behind the various types of questions. 
-    * Text: numeric or integer +/- range validation e.g. age >18
-    * Text: date with the calendar "now" option
+* Use at least 3 types of fields in the list below. Try to also to include
+input validation so you learn the data model behind the various types of
+questions. 
+    * Text: numeric or integer, try range validation e.g. age >18
+    * Text: date or datetime with the calendar "now" option
     * Text: email, zip code, ...
     * Note box
     * Calculated field: check out all the functions you can utilize in those
     * Single-answer multiple choice: dropdown or radio button or yes-no
     * Multiple-choice: check box
-    * Slider: visual analog scale
+    * Slider: visual analog scale e.g. can be used for things like "on a scale
+of silent to hyperventillation with a paper bag, how would you describe
+your breathing when the Star Wars opening credits started?"
     * File upload
     * Signature field
     * Descriptive text where you show off that you know their names or other
@@ -130,18 +139,26 @@ filling your survey. You can upload photos and a logo to your survey.
 would not be comfortable answering private questions or questions about their
 health.
 
-Close the survey by midnight on January 12, 2016 and prepare a summary of what
-you learned about your colleagues from your questionnaire e.g. that 30% do not
-like chocolate holiday desert or that 1/2 of the foreign born participants have
-not had eggnog. 
+Close the survey (you can automatically set the survey to go offline on the
+survey setting page) by midnight on January 12, 2016. 
 
-Note that you don't need to wait until the end to prepare your analysis. You can
-export the data into CSV files (or as JSON stream if you're using the API) while
-data are being entered. You can can prepare tentative reports if you automate
-how you analyze the data.
+Please prepare a short summary sharing what you learned about your colleagues
+from your questionnaire e.g. that 60% of the foreign born participants have
+never had eggnog or 80% of folks whose desks are in Rubloff have gone harrowingly
+uncaffeinated in the afternoons since the espression machine broke down.
+
+Note that you don't need to wait until the end of data collection to to prepare
+your analysis. You can export the data into CSV files (or as JSON stream if
+you're using the API) at any time during data capture. If you automate the
+analysis pipeline, then you can run tentative reports of the progress at any
+point during your data capture.
 
 ## Entering the Roster and Keeping it Current
 
 Disable auto-numbering so you can use `record_id` from the Master Project.
 
 ![Disable auto-numbering of records](resources/disableautonum.png)
+
+
+**DON'T IMPORT USERS WHO HAVE NOT YET CONFIRMED -- build a report that excludes
+those that have not agreed**
