@@ -176,7 +176,7 @@ of variables in the Master Project. So a simple export (of those variables only
 records exists, REDCap will simply ignore them during the bulk import unless the
 values have changed for some reason.
 
-**Option 3**
+**Option 3**  
 You can use the API. There is ample documentation in REDCap on how to use that.
 Request an API token from within Your Local Project and one of the superusers of
 that instance will grant it to you. You can then use it in any programming
@@ -219,11 +219,11 @@ which I have created in both the Master Project and Your Local Project.
 
 ### Updates, FAQs, and Demo Code -- Pull Requests Welcome
 
-Watch this repository on GitHub for any updates (requires having a Github
-account).
+Watch this repository on GitHub for any updates. This requires having a Github
+account.
 
-Create an issue if you have a question. (Other watchers will receive
-notification).
+Create an issue if you have a question. Other watchers will receive
+notification.
 
 I will make any fixes or add clarifications or demo code by creating a pull
 request so you get notifications when I do that.
