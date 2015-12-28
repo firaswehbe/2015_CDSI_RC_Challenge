@@ -1,5 +1,8 @@
 # Instructions
 
+Welcome to the challenge! Below are your instructions. You can bookmark this
+page and return to it as needed.
+
 By now, you should have access to two projects in the [test instance of
 REDCap](https://redcap2.nubic.northwestern.edu):
 
