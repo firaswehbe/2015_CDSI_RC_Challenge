@@ -6,10 +6,10 @@ REDCap](https://redcap2.nubic.northwestern.edu):
 1. **`REDCap API CDSI Dev Talk`**: (Read-only) This is the project for which you
 just filled your participation survey. Your response (including your
 secretphrase) and the responses from everyone else are all  stored in this
-project. This will be referred to as the `Master Project`.
+project. This will be referred to below as the `Master Project`.
 2. **`CDSI Challenge for $YOURNETID`**: A blank project that you will use to survey
 all the other challenge participants. Feel free to rename this project. This
-will be referred to as `Your Personal Project`.
+will be referred to below as `Your Personal Project`.
 
 Your task which is due on **Tuesday January 12, 2016 at midnight** is to build a
 survey in Your Personal Project and send that survey to everyone whose name is
@@ -100,7 +100,7 @@ Designer**.
 ![Enable Participant Survey as a Survey](resources/enableparticipantsurvey.png)
 
 *Note: keep the `Participant Roster` form as is. You're importing data into that
-form through the application and not via an online survey*
+form through REDCap forms and not through an online survey*
 
 Finally, designate the `email` field in the `Participant Roster` form as the
 survey invitation field. This way you can use REDCap's built in survey managment
@@ -145,9 +145,9 @@ Close the survey (you can automatically set the survey to go offline on the
 survey setting page) by midnight on January 12, 2016. 
 
 Please prepare a short summary sharing what you learned about your colleagues
-from your questionnaire e.g. that 60% of the foreign born participants have
-never had eggnog or 80% of folks whose desks are in Rubloff have gone harrowingly
-uncaffeinated in the afternoons since the espresso machine broke down.
+from your questionnaire e.g. that "60% of the foreign born participants have
+never tasted eggnog" or "80% of folks whose desks are in Rubloff have gone harrowingly
+uncaffeinated in the afternoons since the espresso machine broke down".
 
 Note that you don't need to wait until the end of data collection to to prepare
 your analysis. You can export the data into CSV files (or as JSON stream if
@@ -155,40 +155,54 @@ you're using the API) at any time during data capture. If you automate the
 analysis pipeline, then you can run tentative reports of the progress at any
 point during your data capture.
 
+### Test with Dummy Data and Develop Survey Invitation Text
+
+Test your project by creating a few dummy records in the `Participant Roster`
+form simulating how it would appear once you start updating it using data from
+the Master Project. Make sure you have access to some email you provide in some
+of those dummy records so you can preview how the survey invitations and the
+custom surveys (including names and secretphrases) would look like.
+
+It's a good idea to develop and save somewhere the text you want to use in the
+survey invitation emails that go out. Note that you can also use piping in those
+personalized emails.
+
 ## Entering the Roster and Keeping it Current
 
 To send your survey to everyone who wants to participate in this challenge, you
 will need to find a way to copy all the records in The Master Projects with
-those in Your Local Project. Others may join after you have started, so you will
-also need to find a way synchronize those two lists going forward.
+into Your Local Project. Others may join after you have started, so you will
+also need to find a way to synchronize those two lists going forward.
 
 **Option 1**  
-You can always do it by hand, since you have read access via the browser
+You can always do it by hand, since you have read-access via the browser
 interface to the Master Project. This might be tedious if too many people
 participate.
 
 **Option 2**  
 You can also use the import/export modules. In the template I created, I lined
 up the variable names in the `Participant Roster` form with the relevant subset
-of variables in the Master Project. So a simple export (of those variables only
-- see above) from the Master Project and the subsequent import of that
-  spreadsheet into Your Local Project should do the trick. Note that if the
+of variables in the Master Project. So a simple export of those variables 
+(see above) from the Master Project and the subsequent import of that
+spreadsheet into Your Local Project should do the trick. Note that if the
 records exists, REDCap will simply ignore them during the bulk import unless the
-values have changed for some reason.
+values have changed for some reason. That will make it convenient for you to
+simply download and upload without worrying about what's been there before.
 
 **Option 3**  
 You can use the API. There is ample documentation in REDCap on how to use that.
 Request an API token from within Your Local Project and one of the superusers of
-that instance will grant it to you. You can then use it in any programming
-language to access it via https. Note that the api subdirectory, like the REDCap
-instance at NU, requires VPN access if you're off campus.
+that instance will grant it to you. You can then use the token in any programming
+language to interact with REDCap. Note that the api subdirectory on the
+webserver, like access to REDCap itself at NU, requires VPN access if you're off campus.
 
 ### Setting the Record ID to not be automatically numbered
 
 Since a `record_id` variable is canonically required in every REDCap project
 and an associated value is required for every record, you will
 need to either auto-generate one or rely on a `record_id` value set elsewhere.
-The latter is the easier option if you rely on the value assigned to the records
+
+The latter is the easier option if you rely on the values assigned to `record_id`
 in The Master Project. 
 
 Disable auto-numbering from the **Project Set up** and you should see the
@@ -206,7 +220,8 @@ receiving emails as part of this challenge to the email you provided.
 
 One constraint that I am imposing in this challenge (and one which mirrors a
 real-life scenario in which research subjects need to explicitly agree to being
-contacted) is that you check for that agreement in the Master Project. 
+contacted) is that you will need to check for that agreement in the Master
+Project. 
 
 There may be people there who have not yet completed the second survey or who
 have simply abandoned the challenge at that point for not wanting to receive surveys. 
