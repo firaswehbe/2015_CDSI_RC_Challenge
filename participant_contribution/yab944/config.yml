@@ -1,0 +1,4 @@
+---
+  :uri: https://redcap2.nubic.northwestern.edu/redcap/api/
+  :master_token: [YOUR MASTER TOKEN HERE]
+  :individual_token: [YOUR INDIVIDUAL TOKEN HERE]
